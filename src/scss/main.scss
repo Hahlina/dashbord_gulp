@@ -1,0 +1,12 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "inheritance";
+
+@import "./components/burger";
+@import "./components/sideBar";
+@import "./components/header";
+@import "./components/totalBalance";
+@import "./components/_recentTransactions";
+@import "./components/_rightSideBar";

@@ -1,0 +1,55 @@
+.header {
+  margin-top: clamp(3rem, 0.304rem + 1.61vw, 1.75rem); //28px
+  color: $black;
+  font-family: "Lexend-regular";
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: clamp(1.25rem, 0.036rem + 6.07vw, 5.5rem); //88px
+  @include sm {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include md {
+    margin-top: 28px;
+  }
+}
+.welcome {
+  h2 {
+    font-family: "Lexend-SemiBold";
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 130%;
+  }
+  p {
+    font-size: 16px;
+    line-height: 160%;
+    opacity: 0.4;
+  }
+}
+.search {
+  background-color: $secondary;
+  border-radius: $borderRadius10;
+  opacity: 0.6;
+  width: $input-width;
+  height: $input-height;
+  @include flex-center;
+  margin-bottom: 15px;
+  @include md {
+    margin-bottom: 0px;
+  }
+  img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: 22px;
+  }
+}
+input {
+  border: none;
+  width: 243px;
+  height: 26px;
+  opacity: 0.5;
+  background-color: $secondary;
+  margin-left: 16px;
+}

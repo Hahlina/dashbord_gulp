@@ -1,0 +1,141 @@
+.side_bar {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 269px;
+  height: 100%;
+  color: $white;
+  background-color: $black;
+  margin-left: 32px;
+  margin-right: clamp(0.313rem, -2.188rem + 5.21vw, 2.5rem);
+  border-radius: $borderRadius30;
+  font-family: "Lexend-Regular";
+  @include md {
+    display: flex;
+  }
+
+  .logo {
+    margin: 39px 0 71px 32px;
+    font-family: "Lexend-SemiBold";
+    font-size: 22px;
+    line-height: 50px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    a {
+      @include flex-start;
+      gap: 10px;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+  .nav_menu {
+    a {
+      position: relative;
+      margin-left: 34px;
+      margin-bottom: 32px;
+      @extend .underline;
+    }
+  }
+  .list {
+    a {
+      margin: 0;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-left: 25px;
+    }
+  }
+  li {
+    line-height: 160%;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+  .nav_footer {
+    margin-bottom: 54px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin: 0;
+      padding-left: 25px;
+    }
+  }
+  li::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("..//img/icons/sidebar/category.svg");
+    background-size: cover;
+    background-position: center center;
+    margin-right: 12px;
+    vertical-align: top;
+  }
+  li:nth-child(2):before {
+    background-image: url("..//img/icons/sidebar/chart.svg");
+  }
+  li:nth-child(3):before {
+    background-image: url("..//img/icons/sidebar/send.svg");
+  }
+  li:nth-child(4):before {
+    background-image: url("..//img/icons/sidebar/plus.svg");
+  }
+  li:nth-child(5):before {
+    background-image: url("..//img/icons/sidebar/upload.svg");
+  }
+  li:nth-child(6):before {
+    background-image: url("..//img/icons/sidebar/wallet.svg");
+  }
+  li:nth-child(7):before {
+    background-image: url("..//img/icons/sidebar/paper.svg");
+  }
+  .nav_footer {
+    li:nth-child(1):before {
+      background-image: url("..//img/icons/sidebar/profile.svg");
+    }
+    li:nth-child(2):before {
+      background-image: url("..//img/icons/sidebar/setting.svg");
+    }
+  }
+
+  li:after {
+    content: "";
+    display: block;
+    background-color: $blue;
+    width: 236px;
+    height: 50px;
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    z-index: -1;
+    border-radius: $borderRadius10;
+    opacity: 0;
+  }
+
+  span::after {
+    content: url("..//img/icons/other/rectangle.svg");
+    display: inline-block;
+    width: 4px;
+    height: 26px;
+    position: absolute;
+    right: 30px;
+    opacity: 0;
+    z-index: 5;
+    border-radius: 1.5px;
+  }
+
+  li:hover:after {
+    opacity: 1;
+  }
+  li:hover {
+    span:after {
+      opacity: 1;
+    }
+  }
+}

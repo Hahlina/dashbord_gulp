@@ -1,0 +1,78 @@
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 59px;
+  color: $black;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+  }
+  h2 {
+    font-family: "Lexend-SemiBold";
+    font-size: clamp(1rem, 0.821rem + 0.89vw, 1.625rem); //26p
+    line-height: 130%;
+  }
+  p {
+    font-family: "Lexend-Regular";
+    a {
+      display: flex;
+      align-items: center;
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}
+.table {
+  height: 340px;
+  overflow: scroll;
+  font-family: "Lexend-Regular";
+  font-size: clamp(0.625rem, 0.518rem + 0.54vw, 1rem); //16px defoult
+  table {
+    margin-top: 45px;
+    width: 100%;
+
+    height: 100%;
+  }
+  thead {
+    text-align: left;
+    color: #687d8c;
+    opacity: 0.6;
+    th {
+      padding-bottom: 24px;
+    }
+    th:last-child {
+      text-align: center;
+    }
+  }
+  tbody {
+    text-align: left;
+    th,
+    td {
+      padding: 15px 0;
+      border-top: 1px solid #efeff5;
+    }
+    td:nth-child(odd) {
+      font-family: "Lexend-Medium";
+      line-height: 160%;
+      p {
+        font-family: "Lexend-Regular";
+        font-size: clamp(0.625rem, 0.554rem + 0.36vw, 0.875rem); //14px
+        opacity: 0.3;
+      }
+    }
+    td:nth-last-child(1) {
+      color: $green;
+      text-align: center; //right
+    }
+
+    tr:nth-child(3) {
+      td:nth-child(4) {
+        color: $red;
+        text-align: center;
+      }
+    }
+  }
+}

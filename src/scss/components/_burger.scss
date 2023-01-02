@@ -1,0 +1,192 @@
+#burger-menu {
+  display: block;
+  @include md {
+    display: none;
+  }
+
+  cursor: pointer;
+  height: 27px;
+  width: 27px;
+  margin: 5px;
+  margin-left: 0px;
+  overflow: visible;
+  position: fixed;
+  z-index: 100;
+  top: 10px;
+  left: 10px;
+
+  span,
+  span:before,
+  span:after {
+    background: rgb(7, 0, 0);
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+  }
+
+  span:before,
+  span:after {
+    content: "";
+  }
+
+  span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+  }
+
+  span {
+    right: 0px;
+    top: 13px;
+    width: 27px;
+  }
+
+  span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+  }
+
+  &.close {
+    span:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+      background-color: $blue;
+    }
+
+    span {
+      transform: rotate(-45deg);
+      top: 13px;
+      width: 27px;
+      background-color: $blue;
+    }
+
+    span:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+    }
+  }
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+  z-index: 99;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  text-align: center;
+  padding-top: 20px;
+  transition: all 0.3s ease-in-out;
+  @include md {
+    display: none;
+  }
+  &.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 20px;
+    background-color: $black;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  li {
+    display: flex;
+    line-height: 160%;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+  }
+  li::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("..//img/icons/sidebar/category.svg");
+    background-size: cover;
+    background-position: center center;
+    margin-right: 12px;
+    vertical-align: top;
+  }
+  li:nth-child(2):before {
+    background-image: url("..//img/icons/sidebar/chart.svg");
+  }
+  li:nth-child(3):before {
+    background-image: url("..//img/icons/sidebar/send.svg");
+  }
+  li:nth-child(4):before {
+    background-image: url("..//img/icons/sidebar/plus.svg");
+  }
+  li:nth-child(5):before {
+    background-image: url("..//img/icons/sidebar/upload.svg");
+  }
+  li:nth-child(6):before {
+    background-image: url("..//img/icons/sidebar/wallet.svg");
+  }
+  li:nth-child(7):before {
+    background-image: url("..//img/icons/sidebar/paper.svg");
+  }
+  li:nth-child(8):before {
+    background-image: url("..//img/icons/sidebar/profile.svg");
+  }
+  li:nth-child(9):before {
+    background-image: url("..//img/icons/sidebar/setting.svg");
+  }
+
+  a {
+    color: $white;
+    display: block;
+    font-size: clamp(1rem, 0.286rem + 3.57vw, 2rem);
+
+    text-decoration: none;
+  }
+}
+li:after {
+  content: "";
+  display: block;
+  background-color: $blue;
+  width: clamp(10.625rem, 6.161rem + 22.32vw, 16.875rem);
+  height: 50px;
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  z-index: -1;
+  border-radius: $borderRadius10;
+  opacity: 0;
+}
+
+span::after {
+  content: url("..//img/icons/other/rectangle.svg");
+  display: inline-block;
+  width: 4px;
+  height: 26px;
+  position: absolute;
+  right: -10px;
+  opacity: 0;
+  z-index: 5;
+  border-radius: 1.5px;
+}
+
+li:hover:after {
+  opacity: 1;
+}
+li:hover {
+  span:after {
+    opacity: 1;
+  }
+}
