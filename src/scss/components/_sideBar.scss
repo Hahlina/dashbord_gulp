@@ -32,11 +32,13 @@
     }
   }
   .nav_menu {
+    .a_menu {
+      @extend .underline;
+    }
     a {
       position: relative;
       margin-left: 34px;
       margin-bottom: 32px;
-      @extend .underline;
     }
   }
   .list {
