@@ -1,11 +1,11 @@
 .header {
-  margin-top: clamp(3rem, 0.304rem + 1.61vw, 1.75rem); //28px
+  margin-top: clamp(3rem, 0.304rem + 1.61vw, 1.75rem);
   color: $black;
   font-family: "Lexend-regular";
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  margin-bottom: clamp(1.25rem, 0.036rem + 6.07vw, 5.5rem); //88px
+  margin-bottom: clamp(1.25rem, 0.036rem + 6.07vw, 5.5rem);
   @include sm {
     flex-direction: row;
     justify-content: space-between;

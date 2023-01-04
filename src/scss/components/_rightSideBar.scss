@@ -22,16 +22,16 @@
   }
 }
 .quick_transfer {
-  margin-top: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem); //40px
+  margin-top: clamp(1.25rem, 0.893rem + 1.79vw, 2.5rem);
   max-width: 390px;
 }
 .text_block {
   display: flex;
   justify-content: space-between;
-  margin-bottom: clamp(0.938rem, 0.705rem + 1.16vw, 1.75rem); //28px
+  margin-bottom: clamp(0.938rem, 0.705rem + 1.16vw, 1.75rem);
   font-family: "Lexend-SemiBold";
   h2 {
-    font-size: clamp(1.125rem, 1.018rem + 0.54vw, 1.5rem); //24px
+    font-size: clamp(1.125rem, 1.018rem + 0.54vw, 1.5rem);
     line-height: 130%;
   }
   img {
@@ -42,11 +42,11 @@
 .input_numberCard {
   @include flex-center;
   background-color: $secondary05;
-  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem); //72px
+  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem);
   max-width: 390px;
   margin-bottom: 16px;
   border-radius: $borderRadius12;
-  font-size: clamp(1rem, 0.929rem + 0.36vw, 1.25rem); //20px
+  font-size: clamp(1rem, 0.929rem + 0.36vw, 1.25rem);
   input {
     width: 100%;
 
@@ -68,11 +68,11 @@
 .number_sum {
   @include flex-center;
   max-width: 220px;
-  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem); //72px
+  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem);
   background-color: $secondary05;
   border-radius: $borderRadius12;
   font-family: "Lexend-SemiBold";
-  font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem); //24px
+  font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
   margin-right: 20px;
   input {
     width: 80%;
@@ -84,7 +84,7 @@
 }
 .currency {
   display: flex;
-  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem); //72px
+  height: clamp(3.125rem, 2.732rem + 1.96vw, 4.5rem);
   width: 150px;
   align-items: center;
   padding-left: 16px;
@@ -112,7 +112,7 @@
   }
   span {
     font-family: "Lexend-Medium";
-    font-size: clamp(1rem, 0.893rem + 0.54vw, 1.375rem); //22px
+    font-size: clamp(1rem, 0.893rem + 0.54vw, 1.375rem);
   }
 }
 
@@ -143,7 +143,7 @@
   }
   h2 {
     font-family: "Lexend-SemiBold";
-    font-size: clamp(1.125rem, 0.982rem + 0.71vw, 1.625rem); //26px
+    font-size: clamp(1.125rem, 0.982rem + 0.71vw, 1.625rem);
     margin-bottom: 4px;
   }
 }

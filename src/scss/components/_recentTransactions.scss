@@ -11,7 +11,7 @@
   }
   h2 {
     font-family: "Lexend-SemiBold";
-    font-size: clamp(1rem, 0.821rem + 0.89vw, 1.625rem); //26p
+    font-size: clamp(1rem, 0.821rem + 0.89vw, 1.625rem);
     line-height: 130%;
   }
   p {
@@ -29,7 +29,7 @@
   height: 340px;
   overflow: scroll;
   font-family: "Lexend-Regular";
-  font-size: clamp(0.625rem, 0.518rem + 0.54vw, 1rem); //16px defoult
+  font-size: clamp(0.625rem, 0.518rem + 0.54vw, 1rem);
   table {
     margin-top: 45px;
     width: 100%;
@@ -59,13 +59,13 @@
       line-height: 160%;
       p {
         font-family: "Lexend-Regular";
-        font-size: clamp(0.625rem, 0.554rem + 0.36vw, 0.875rem); //14px
+        font-size: clamp(0.625rem, 0.554rem + 0.36vw, 0.875rem);
         opacity: 0.3;
       }
     }
     td:nth-last-child(1) {
       color: $green;
-      text-align: center; //right
+      text-align: center;
     }
 
     tr:nth-child(3) {
