@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 *,
@@ -27,13 +28,13 @@ input {
 }
 .wrapper {
   display: flex;
-  justify-content: center; //не було при пк
+  justify-content: center;
   padding: clamp(0.313rem, -0.17rem + 2.41vw, 2rem) 0;
 }
 .main {
   display: flex;
-  flex-wrap: wrap; //не було при пк
-  justify-content: center; //не було при пк
+  flex-wrap: wrap;
+  justify-content: center;
   @include l {
     flex-wrap: nowrap;
   }
